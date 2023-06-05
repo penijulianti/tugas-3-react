@@ -1,5 +1,5 @@
 import CardPhoto from "./CardPhoto"
-
+import "./main.css";
 
 function List () {
     const listProduct = [
@@ -35,13 +35,14 @@ function List () {
         },
       ]
    return(
-    // List Rendering
-    
-    listProduct.map((value,index)=>{
+    <div className="container">
+    {/* // List Rendering */}
+    {listProduct.map((value,index)=>{
         return <CardPhoto key ={index}  al = {value.urlImage} nm = {value.productName} pr= {value.productPrice} myAlert ={ ()=>{
-            alert('Product '+value.productName+' Dengan Harga '+value.productPrice+' adalah Product yang sangat Populer')
+            alert('Sepatu '+value.productName+'Harga '+value.productPrice+' merupakan Product Sepatu yang sangat Populer dan berkualitas Tinggi'+ '\nWe Hope You Like This')
         }}/>
-    })
+    })}
+    </div>
    )
   }
-export default List
+export default List
